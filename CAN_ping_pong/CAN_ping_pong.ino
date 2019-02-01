@@ -1,9 +1,13 @@
-/* CAN Loopback Example
- * This example sends a message once a second and receives that message
- *   no CAN bus is required.  This example will test the functionality 
- *   of the protocol controller, and connections to it.
+/* CAN Ping Pong from Cory J Fowler's CAN Loopback Example
+ *
+ * This program displays all received messages and sends a message
+ * once a second.
+ * If a message is received, the next transmission is scheduled for 1/2
+ * second later.  If used on 2 boards, they will then be in sync.
+ *
+ * This code is configured to run on the Feather CAN board
  *   
- *   Written By: Cory J. Fowler - October 5th 2016
+ *   Written By: Bob D'Avello 1/31/2019
  */
 
 #include <mcp_can.h>
